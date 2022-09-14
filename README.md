@@ -1,24 +1,63 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog app - creating a data model
 
-Things you may want to cover:
+> In this part of the project, we used migration files to build our schema.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby on Rails & postgreSQL.
+- Linters (Rubocop, Stylelint).
+- Git & GitHub.
 
-* Configuration
+## Getting Started
 
-* Database creation
+To get a local copy up and running follow these simple example steps.
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+    Git
+    PostgreSQL
+    Ruby on Rails
 
-* Services (job queues, cache servers, search engines, etc.)
+### Setup
 
-* Deployment instructions
+    1. git clone git@github.com:jevazquezb/Blog_app.git
+    2. cd Blog_app
 
-* ...
+### Usage
+
+    rails server
+
+### Done!
+
+Ready to work?⛏️ You're all set to explore and change the repo locally (on your computer).
+
+## Author
+
+👤 **Jesús Vázquez**
+
+- GitHub: [@jevazquezb](https://github.com/jevazquezb)
+- Twitter: [@javb_1187](https://twitter.com/javb_1187)
+- LinkedIn: [@jevazquezb](https://www.linkedin.com/in/jevazquezb)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- My fellow Micronauts.
+- Google and Stack Overflow.
+- Inspiration.
+- etc.
+
+## 📝 License
+
+This project is [MIT](./MIT) licensed.

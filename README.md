@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - creating a data model
+# Blog app - processing data in models
 
-> In this part of the project, we used migration files to build our schema.
+> In this part of the project, we set up models for Users, Posts, Comments, and Likes. Besides, we created custom methods for each of the models.
 
 ## Built With
 

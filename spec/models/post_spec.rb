@@ -14,7 +14,7 @@ RSpec.describe Post, type: :model do
     Post.create(
       author: user,
       title: 'Hello',
-      text: "This is my first post",
+      text: 'This is my first post',
       comments_counter: 0,
       likes_counter: 0
     )
@@ -32,7 +32,7 @@ RSpec.describe Post, type: :model do
     end
 
     it "title's length should not be more than 250 characters" do
-      post.title = 'a'*251
+      post.title = 'a' * 251
       expect(post).to_not be_valid
     end
 
@@ -57,13 +57,13 @@ RSpec.describe Post, type: :model do
     end
   end
 
-  context "recent_comments method" do
+  context 'recent_comments method' do
     before do
       8.times do |c|
         Comment.create(
           post: post,
           author: user,
-          text: "This is my comment #{c}",
+          text: "This is my comment #{c}"
         )
       end
     end
@@ -77,7 +77,7 @@ RSpec.describe Post, type: :model do
     end
   end
 
-  context "update_posts_counter method" do
+  context 'update_posts_counter method' do
     before do
       post.destroy
 

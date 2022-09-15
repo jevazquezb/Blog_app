@@ -14,7 +14,7 @@ RSpec.describe Like, type: :model do
     Post.create(
       author: user,
       title: 'Hello',
-      text: "This is my first post",
+      text: 'This is my first post',
       comments_counter: 0,
       likes_counter: 0
     )
@@ -23,20 +23,20 @@ RSpec.describe Like, type: :model do
   subject(:like) do
     Like.create(
       post: post,
-      author: user,
+      author: user
     )
   end
 
-  context "update_likes_counter method" do
+  context 'update_likes_counter method' do
     before do
       like.destroy
 
       3.times do
         Like.create(
           post: post,
-          author: user,
+          author: user
         )
-      end      
+      end
     end
 
     it 'should be present in Like model' do

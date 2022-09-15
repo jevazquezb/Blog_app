@@ -14,7 +14,7 @@ RSpec.describe Comment, type: :model do
     Post.create(
       author: user,
       title: 'Hello',
-      text: "This is my first post",
+      text: 'This is my first post',
       comments_counter: 0,
       likes_counter: 0
     )
@@ -24,11 +24,11 @@ RSpec.describe Comment, type: :model do
     Comment.create(
       post: post,
       author: user,
-      text: "This is my first comment"
+      text: 'This is my first comment'
     )
   end
 
-  context "update_comments_counter method" do
+  context 'update_comments_counter method' do
     before do
       comment.destroy
 
@@ -38,7 +38,7 @@ RSpec.describe Comment, type: :model do
           author: user,
           text: "This is my comment #{c}"
         )
-      end      
+      end
     end
 
     it 'should be present in Comment model' do

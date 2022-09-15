@@ -9,28 +9,28 @@ RSpec.describe User, type: :model do
       posts_counter: 0
     )
   end
-  
+
   context 'For validation tests, User' do
     it 'name should be present (not nil)' do
       user.name = nil
       expect(user).to_not be_valid
     end
-  
+
     it 'name should be present (not empty string)' do
       user.name = ''
       expect(user).to_not be_valid
     end
-  
+
     it 'name should not be too short' do
       user.name = 'a'
       expect(user).to_not be_valid
     end
-  
+
     it 'posts_counter should not be float' do
       user.posts_counter = 1.7
       expect(user).to_not be_valid
     end
-  
+
     it 'posts_counter should not be negative' do
       user.posts_counter = -1
       expect(user).to_not be_valid
@@ -57,5 +57,5 @@ RSpec.describe User, type: :model do
     it 'recent_posts should return the last three posts' do
       expect(user.recent_posts.count).to eq(3)
     end
-  end  
+  end
 end

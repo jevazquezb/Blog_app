@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - processing data in models
+# Blog app - validations and model specs
 
-> In this part of the project, we set up models for Users, Posts, Comments, and Likes. Besides, we created custom methods for each of the models.
+> In this part of the project, we added validations to our models and created specs for them.
 
 ## Built With
 

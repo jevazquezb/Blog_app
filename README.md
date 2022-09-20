@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - validations and model specs
+# Blog app - controllers
 
-> In this part of the project, we added validations to our models and created specs for them.
+> In this part of the project, we created all controllers and views for our Blog app. As we didn't process any data yet, we added simple placeholders for our views with plain HTML.
 
 ## Built With
 

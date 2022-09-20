@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - controllers
+# Blog app - controllers specs
 
-> In this part of the project, we created all controllers and views for our Blog app. As we didn't process any data yet, we added simple placeholders for our views with plain HTML.
+> In this part of the project, we set up tests on the controllers recently added to our Blog app.
 
 ## Built With
 

@@ -1,52 +1,21 @@
 <header>
-  <div class="user-cont">
-    <img src="" alt="User" title="User">
-    <div>
-      <h2>User name</h2>
-      <h3>Number of posts: X</h3>   
-    </div>
-  </div>
+  <%= render @user %>
 </header>
 <main>
   <ul>
-    <li>
-      <div>
-        <%= raw "<h4>Post #1</h4>" %>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elite. Ut tempor, turpis...
-        </p>
-        <p>
-          <span>Comments: x,</span>
-          <span>Likes: y</span>
-        </p>
-      </div>
-      <ul>
-        <li>Username: Comment 1</li>
-        <li>Username: Comment 2</li>
-        <li>Username: Comment 3</li>
-        <li>Username: Comment 4</li>
-        <li>Username: Comment 5</li>
-      </ul>
-    </li>
-    <li>
-      <div>
-        <%= raw "<h4>Post #2</h4>" %>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elite. Ut tempor, turpis...
-        </p>
-        <p>
-          <span>Comments: x,</span>
-          <span>Likes: y</span>
-        </p>
-      </div>
-      <ul>
-        <li>Username: Comment 1</li>
-        <li>Username: Comment 2</li>
-        <li>Username: Comment 3</li>
-        <li>Username: Comment 4</li>
-        <li>Username: Comment 5</li>
-      </ul>
-    </li>    
+    <% @user.posts.each do |post| %>
+      <li>
+        <%= link_to user_post_path(@user.id, post.id), class: "post-link" do %>
+          <div><%= render post %></div> <%# "render "posts/post", post: post" is a longer way %>
+        <% end %>
+
+        <ul>
+          <% post.recent_comments.each do |comment| %>
+            <%= render comment %> <%# "render "comments/comment", comment: comment" is a longer way %>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>     
   </ul>
   <button type="button">Pagination</button>
 </main>

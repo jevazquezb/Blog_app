@@ -1,34 +1,13 @@
-<section id="post">
-  <%= raw "<h4>Post #1 by username</h4>" %>
+<section id="post-<% @post.id %>">
+  <h4><%= @post.title %> by <%= @post.author.name %></h4>
   <p>
-    <span>Comments: x,</span>
-    <span>Likes: y</span>
+    <span>Comments: <%= @post.comments_counter || 0 %>, </span>
+    <span>Likes: <%= @post.likes_counter || 0 %></span>
   </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor, turpis
-    ac venenatis elementum, purus arcu fermentum orci, porta ultrices diam ex ut turpis.
-    Vestibulum in elit sed est vehicula hendrerit. Nullam sit amet suscipit ante. Sed in
-    accumsan lacus. Vestibulum facilisis sapien nibh, et pottitor nunc dictum et. Maecenas
-    id placerat urna. Aenean semper sit amet justo a tincidunt. Maecenas pretium at dui in
-    condimentum. Phasellus consequat molestie turpis vitae posuere. Aliquam scelerisque
-    aliquet dui id maximus. Vestibilum vel euismod quam. Proin molestie nunc vel laoreet 
-    ultrices. Suspendisse eu arcu sit amet lorem hendrerit ultrices id quis arcu.
-  </p>
-  <p>
-    Maecenas consequat hendrerit nibh vitae pulvinar. Morbi ut hendrerit odio. Donec non
-    egestas mi. Cras ligula tellus, finibus eget interdum sit amet, eleifend vitae dui.
-    Proin tempus at mauris vel vulputate.
-  </p>
+  <p><%= @post.text %></p>
 </section>
 <ul>
-  <li>Username: Comment 1</li>
-  <li>Username: Comment 2</li>
-  <li>Username: Comment 3</li>
-  <li>Username: Comment 4</li>
-  <li>Username: Comment 5</li>
-  <li>Username: Comment 6</li>
-  <li>Username: Comment 7</li>
-  <li>Username: Comment 8</li>
-  <li>Username: Comment 9</li>
-  <li>Username: Comment 10</li>
+  <% @post.comments.each do |comment| %>
+    <%= render comment %> <%# "render "comments/comment", comment: comment" is a longer way %>
+  <% end %>
 </ul>

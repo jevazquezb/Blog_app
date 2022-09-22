@@ -11,7 +11,7 @@
 
         <ul>
           <% post.recent_comments.each do |comment| %>
-            <%= render comment %> <%# "render "comments/comment", comment: comment" is a longer way %>
+            <li><%= comment.author.name %>: <%= comment.text %></li> <%# "render "comments/comment", comment: comment" is a longer way %>
           <% end %>
         </ul>
       </li>

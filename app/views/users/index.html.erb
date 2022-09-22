@@ -1,4 +1,4 @@
-<%= raw "<h1>User's list</h1>" %>
+<h1 class="main-title">Users list</h1>
 <ul>
   <% @users.each do |user| %>
     <%= link_to user_path(user.id), class: "user-link" do %>

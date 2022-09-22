@@ -1,12 +1,12 @@
-<section id="post-<% @post.id %>">
-  <h4><%= @post.title %> by <%= @post.author.name %></h4>
-  <p>
+<section class="border post-pad" id="post-<% @post.id %>">
+  <h4 class="bio-title"><%= @post.title %> by <%= @post.author.name %></h4>
+  <p class="num-post com-foot">
     <span>Comments: <%= @post.comments_counter || 0 %>, </span>
     <span>Likes: <%= @post.likes_counter || 0 %></span>
   </p>
   <p><%= @post.text %></p>
 </section>
-<ul>
+<ul class="<%= 'border post-pad' if @post.comments.length != 0 %>">
   <% @post.comments.each do |comment| %>
     <li><%= comment.author.name %>: <%= comment.text %></li> <%# "render "comments/comment", comment: comment" is a longer way %>
   <% end %>

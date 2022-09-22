@@ -1,19 +1,19 @@
-<header>
+<header class="user-cont">
   <%= render @user %>
 </header>
-<main>
-  <section id="bio-<% @user.id %>">
-    <h4>Bio</h4>
+<main class="main-cont">
+  <section class="border bio-cont stretch" id="bio-<% @user.id %>">
+    <h4 class="bio-title">Bio</h4>
     <p><%= @user.bio %></p>
   </section>
-  <ul>
+  <ul class="stretch">
     <% @user.recent_posts.each do |post| %>
-      <%= link_to user_post_path(@user.id, post.id), class: "post-link" do %>
-        <li><%= render post %></li> <%# "render "posts/post", post: post" is a longer way %>
+      <%= link_to user_post_path(@user.id, post.id), class: "user-link" do %>
+        <li class="border bio-cont"><%= render post %></li> <%# "render "posts/post", post: post" is a longer way %>
       <% end %>
     <% end %>
   </ul>
-  <%= link_to user_posts_path(@user.id), class: "post-all" do %>
-    <button type="button">See all posts</button>
+  <%= link_to user_posts_path(@user.id) do %>
+    <button class="btn" type="button">See all posts</button>
   <% end %>
 </main>

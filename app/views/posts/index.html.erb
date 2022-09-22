@@ -1,15 +1,15 @@
-<header>
+<header class="user-cont">
   <%= render @user %>
 </header>
-<main>
-  <ul>
+<main class="main-cont">
+  <ul class="stretch">
     <% @user.posts.each do |post| %>
-      <li>
-        <%= link_to user_post_path(@user.id, post.id), class: "post-link" do %>
-          <div><%= render post %></div> <%# "render "posts/post", post: post" is a longer way %>
+      <li class="post-com-cont">
+        <%= link_to user_post_path(@user.id, post.id), class: "user-link" do %>
+          <div class="border post-pad"><%= render post %></div> <%# "render "posts/post", post: post" is a longer way %>
         <% end %>
 
-        <ul>
+        <ul class="<%= 'border post-pad' if post.comments.length != 0 %>">
           <% post.recent_comments.each do |comment| %>
             <li><%= comment.author.name %>: <%= comment.text %></li> <%# "render "comments/comment", comment: comment" is a longer way %>
           <% end %>
@@ -17,5 +17,5 @@
       </li>
     <% end %>     
   </ul>
-  <button type="button">Pagination</button>
+  <button class="btn" type="button">Pagination</button>
 </main>

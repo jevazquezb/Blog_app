@@ -1,0 +1,80 @@
+body {
+  padding: 5%;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-link {
+  text-decoration: none;
+  color: black;
+}
+
+.user-cont {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.img-size {
+  width: 150px;
+  height: 150px;
+  margin-right: 5%;
+}
+
+.border {
+  border: 5px solid black;
+}
+
+.user-info {
+  padding: 3%;
+  flex-grow: 1;
+}
+
+.user-name {
+  font-size: 2.5rem;
+}
+
+.num-post {
+  text-align: end;
+}
+
+.com-foot {
+  font-size: 0.8rem;
+}
+
+.main-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stretch {
+  align-self: stretch;
+}
+
+.bio-cont {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.bio-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.post-com-cont {
+  margin-bottom: 20px;
+}
+
+.post-pad {
+  padding: 10px;
+  margin-bottom: 5px;
+}

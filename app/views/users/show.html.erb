@@ -1,53 +1,19 @@
-<header>
-  <div class="user-cont">
-    <img src="" alt="User" title="User">
-    <div>
-      <h2>User name</h2>
-      <h3>Number of posts: X</h3>   
-    </div>
-  </div>
+<header class="user-cont">
+  <%= render @user %>
 </header>
-<main>
-  <section id="bio">
-    <h4>Bio</h4>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor, turpis
-      ac venenatis elementum, purus arcu fermentum orci, porta ultrices diam ex ut turpis.
-      Vestibulum in elit sed est vehicula hendrerit. Nullam sit amet suscipit ante. Sed in
-      accumsan lacus.
-    </p>
+<main class="main-cont">
+  <section class="border bio-cont stretch" id="bio-<% @user.id %>">
+    <h4 class="bio-title">Bio</h4>
+    <p><%= @user.bio %></p>
   </section>
-  <ul>
-    <li>
-      <%= raw "<h4>Post #1</h4>" %>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elite. Ut tempor, turpis...
-      </p>
-      <p>
-        <span>Comments: x,</span>
-        <span>Likes: y</span>
-      </p>
-    </li>
-    <li>
-      <%= raw "<h4>Post #2</h4>" %>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elite. Ut tempor, turpis...
-      </p>
-      <p>
-        <span>Comments: x,</span>
-        <span>Likes: y</span>
-      </p>
-    </li>
-    <li>
-      <%= raw "<h4>Post #3</h4>" %>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elite. Ut tempor, turpis...
-      </p>
-      <p>
-        <span>Comments: x,</span>
-        <span>Likes: y</span>
-      </p>
-    </li>
+  <ul class="stretch">
+    <% @user.recent_posts.each do |post| %>
+      <%= link_to user_post_path(@user.id, post.id), class: "user-link" do %>
+        <li class="border bio-cont"><%= render post %></li> <%# "render "posts/post", post: post" is a longer way %>
+      <% end %>
+    <% end %>
   </ul>
-  <button type="button">See all posts</button>
+  <%= link_to user_posts_path(@user.id) do %>
+    <button class="btn" type="button">See all posts</button>
+  <% end %>
 </main>

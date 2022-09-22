@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - controllers specs
+# Blog app - Views
 
-> In this part of the project, we set up tests on the controllers recently added to our Blog app.
+> In this part of the project, we added the Views associated with the Models and Controllers we've already created for our Blog App.
 
 ## Built With
 

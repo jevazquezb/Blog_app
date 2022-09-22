@@ -1,26 +1,10 @@
-<%= raw "<h1>User's list</h1>" %>
-<%= raw "<p>Here will go the user's list</p>" %>
+<h1 class="main-title">Users list</h1>
 <ul>
-  <li class="user-cont">
-    <img src="" alt="User" title="User">
-    <div>
-      <h2>User name 1</h2>
-      <h3>Number of posts: X</h3>   
-    </div>
-  </li>
-  <li class="user-cont">
-    <img src="" alt="User" title="User">
-    <div>
-      <h2>User name 2</h2>
-      <h3>Number of posts: Y</h3>   
-    </div>
-  </li>
-  <li class="user-cont">
-    <img src="" alt="User" title="User">
-    <div>
-      <h2>User name 3</h2>
-      <h3>Number of posts: Z</h3>   
-    </div>
-  </li>
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id), class: "user-link" do %>
+      <li class="user-cont">
+        <%= render user %> <%# "render "users/user", user: user" is a longer way %>
+      </li>
+    <% end %>
+  <% end %>
 </ul>
-

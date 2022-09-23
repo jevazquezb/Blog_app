@@ -1,0 +1,13 @@
+<%= form_with model: [@user, @post, @comment], class: "form-post" do |form| %>
+  <h2 class="form-title">Add a Comment</h2>
+  <div class="input-sec">
+    <%= form.text_area :text,
+    placeholder: "Write a comment...", 
+    required: true,
+    class: "user-input text-height" %>
+  </div>
+
+  <div>
+    <%= form.submit "Comment", class: "btn" %>
+  </div>
+<% end %>

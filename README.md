@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - Views
+# Blog app - Add forms
 
-> In this part of the project, we added the Views associated with the Models and Controllers we've already created for our Blog App.
+> In this part of the project, we added forms to our Blog App.
 
 ## Built With
 

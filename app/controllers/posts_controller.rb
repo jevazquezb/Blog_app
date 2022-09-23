@@ -24,7 +24,8 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
-  def posts_params # 1.- Retrieves the form data for a post from the params hash
+  # 1.- Retrieves the form data for a post from the params hash
+  def posts_params
     params.require(:post).permit(:title, :text)
   end
 

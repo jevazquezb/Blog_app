@@ -11,7 +11,8 @@ class CommentsController < ApplicationController
     end
   end
 
-  def comments_params # 1.- Retrieves the form data for a comment from the params hash
+  # 1.- Retrieves the form data for a comment from the params hash
+  def comments_params
     params.require(:comment).permit(:text)
   end
 

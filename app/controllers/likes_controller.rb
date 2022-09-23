@@ -3,7 +3,7 @@ class LikesController < ApplicationController
     @user = current_user
     @post = Post.find(params[:post_id])
 
-    if has_a_like?
+    if liked?
       redirect_to user_post_url(@user.id, @post.id)
     else
       @like = Like.new(params.permit(:@user, :@post))
@@ -13,9 +13,9 @@ class LikesController < ApplicationController
     end
   end
 
-  def has_a_like?
+  def liked?
     Like.where(author_id: @user.id, post_id: @post.id).exists?
   end
 
-  private :has_a_like?
+  private :liked?
 end

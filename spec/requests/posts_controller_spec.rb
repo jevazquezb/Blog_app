@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :request do
   before(:each) do
     @user = User.create(name: 'Javier', photo: 'Photo', bio: "Hello, I'm Javier and I'm a Physicist.")
-    @post = Post.create(title: "Random Post", text: "This is a random post.", author_id: @user.id)
+    @post = Post.create(title: 'Random Post', text: 'This is a random post.', author_id: @user.id)
   end
 
   context '/users/:user_id/posts route (GET #index)' do

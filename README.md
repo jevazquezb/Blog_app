@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - Add forms
+# Blog app - integration specs for views and fix n+1 problems
 
-> In this part of the project, we added forms to our Blog App.
+> In this part of the project, we added integration tests for all of the views used in our project.
 
 ## Built With
 

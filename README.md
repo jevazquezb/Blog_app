@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 Ready to work?⛏️ You're all set to explore and change the repo locally (on your computer).
 
-## Author
+## Authors
 
 👤 **Jesús Vázquez**
 
@@ -46,6 +46,12 @@ Ready to work?⛏️ You're all set to explore and change the repo locally (on y
 - GitHub: [@Addisu87](https://github.com/Addisu87)
 - Twitter: [@AddisuTedla](https://twitter.com/AddisuTedla)
 - LinkedIn: [Addisu Tedla](www.linkedin.com/in/addisu-tedla/)
+
+👤 **Elson Otake**
+
+- GitHub: [@elsonotake](https://github.com/elsonotake)
+- Twitter: [@elsonotake](https://twitter.com/elsonotake)
+- LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
 
 ## 🤝 Contributing
 

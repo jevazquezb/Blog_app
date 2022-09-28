@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app - Add forms
+# Blog app - integration specs for views and fix n+1 problems
 
-> In this part of the project, we added forms to our Blog App.
+> In this part of the project, we added integration tests for all of the views used in our project.
 
 ## Built With
 
@@ -33,13 +33,25 @@ To get a local copy up and running follow these simple example steps.
 
 Ready to work?⛏️ You're all set to explore and change the repo locally (on your computer).
 
-## Author
+## Authors
 
 👤 **Jesús Vázquez**
 
 - GitHub: [@jevazquezb](https://github.com/jevazquezb)
 - Twitter: [@javb_1187](https://twitter.com/javb_1187)
 - LinkedIn: [@jevazquezb](https://www.linkedin.com/in/jevazquezb)
+
+👤 **Addisu Haile**
+
+- GitHub: [@Addisu87](https://github.com/Addisu87)
+- Twitter: [@AddisuTedla](https://twitter.com/AddisuTedla)
+- LinkedIn: [Addisu Tedla](www.linkedin.com/in/addisu-tedla/)
+
+👤 **Elson Otake**
+
+- GitHub: [@elsonotake](https://github.com/elsonotake)
+- Twitter: [@elsonotake](https://twitter.com/elsonotake)
+- LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
 
 ## 🤝 Contributing
 

@@ -58,7 +58,7 @@ group :development, :test do
   gem 'bullet'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  #Preview email in the default browser instead of sending it
+  # Preview email in the default browser instead of sending it
   gem 'letter_opener'
 
   gem 'rails-controller-testing'

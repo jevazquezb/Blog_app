@@ -29,6 +29,9 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Use the devise gem as the session and account manager for the application
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -55,6 +58,9 @@ group :development, :test do
   gem 'bullet'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  # Preview email in the default browser instead of sending it
+  gem 'letter_opener'
+
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end

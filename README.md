@@ -1,8 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Blog app - devise
 
-# Blog app - integration specs for views and fix n+1 problems
-
-> In this part of the project, we added integration tests for all of the views used in our project.
+> In this part of the project, we added the devise gem to our app and use it for the registration and login of users.
 
 ## Built With
 
@@ -72,4 +70,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT) licensed.
+This project is [MIT](./MIT.md) licensed.

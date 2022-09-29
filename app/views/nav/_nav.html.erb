@@ -4,9 +4,28 @@
       <%= link_to root_path do %>
         <button class="btn" type="button">Home</button>
       <% end %>
-      <%= link_to new_post_path do %>
-        <button class="btn" type="button">Create a Post</button>
-      <% end %>
+     
+      <% if user_signed_in? %>
+        <%= link_to user_path(current_user) do %>
+          <button class="btn" type="button">Timeline</button>
+        <% end %> 
+        <%= link_to new_post_path do %>
+          <button class="btn" type="button">Create a Post</button>
+        <% end %> 
+        <%= link_to edit_user_registration_path do %>
+          <button class="btn" type="button">Change password</button>
+        <% end %>
+        <%= link_to destroy_user_session_path do %>
+          <button class="btn" type="button">Sign out</button>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_registration_path do %>
+          <button class="btn" type="button">Suscribe!</button>
+        <% end %>
+        <%= link_to new_user_session_path do %>
+          <button class="btn" type="button">Sign in</button>
+        <% end %>
+      <% end %>     
     </ul>
   </nav>
 </header>

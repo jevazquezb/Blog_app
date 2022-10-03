@@ -1,8 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
+  before(:each) do
+    @user = User.create(name: 'Javier', photo: 'Photo', bio: "Hello, I'm Javier and I'm a Physicist.")
+  end
+  
   context '/users route (GET #index)' do
-    before(:each) { get '/users' }
+    before(:each) { get users_path }
 
     it 'should be a success when called' do
       expect(response).to have_http_status(:ok)
@@ -13,12 +17,12 @@ RSpec.describe UsersController, type: :request do
     end
 
     it "should render the correct content in the 'index' template" do
-      expect(response.body).to include('User name 2')
+      expect(response.body).to include('Javier')
     end
   end
 
   context '/users/:id route (GET #show)' do
-    before(:each) { get '/users/1' }
+    before(:each) { get user_path(@user) }
 
     it 'should be a success when called' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +33,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it "should render the correct content in the 'show' template" do
-      expect(response.body).to include('Bio')
+      expect(response.body).to include('Physicist')
     end
   end
 end

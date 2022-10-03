@@ -2,7 +2,7 @@
   <%= render @post %>  
 </section>
 <ul class="<%= 'border post-pad' if @post.comments.length != 0 %>">
-  <% @post.comments.each do |comment| %>
+  <% @post.comments.includes(:author).each do |comment| %>
     <li><%= comment.author.name %>: <%= comment.text %></li> <%# "render "comments/comment", comment: comment" is a longer way %>
   <% end %>
 </ul>

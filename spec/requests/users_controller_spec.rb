@@ -4,7 +4,7 @@ RSpec.describe UsersController, type: :request do
   before(:each) do
     @user = User.create(name: 'Javier', photo: 'Photo', bio: "Hello, I'm Javier and I'm a Physicist.")
   end
-  
+
   context '/users route (GET #index)' do
     before(:each) { get users_path }
 

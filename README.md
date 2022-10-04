@@ -24,10 +24,12 @@ To get a local copy up and running follow these simple example steps.
 
     1. git clone git@github.com:jevazquezb/Blog_app.git
     2. cd Blog_app
+    3. bundle install
 
 ### Usage
 
-    rails server
+    1. rails server
+    2. xdg-open http://localhost:3000/
 
 ### Done!
 

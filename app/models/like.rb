@@ -8,5 +8,5 @@ class Like < ApplicationRecord
     post.update(likes_counter: post.likes.count)
   end
 
-  private :update_likes_counter
+  
 end

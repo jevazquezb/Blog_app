@@ -97,6 +97,7 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .input-sec {
@@ -119,4 +120,25 @@ body {
 
 .left-align {
   text-align: right;
+}
+
+/* Add styles to devise forms */
+.links-cont {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  row-gap: 10px;
+}
+
+.password {
+  font-size: 0.9rem;
+}
+
+.center-cont {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flex-right {
+  align-items: flex-end;
 }

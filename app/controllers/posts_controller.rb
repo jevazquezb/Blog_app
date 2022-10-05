@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create delete]
+  before_action :authenticate_user!, only: %i[new create delete] #authentication
   
   def index
     @user = User.find(params[:user_id])

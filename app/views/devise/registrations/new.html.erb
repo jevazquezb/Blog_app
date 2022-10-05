@@ -1,0 +1,40 @@
+<h2 class="form-title">Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-post" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="input-sec">
+    <%= f.text_field :name, placeholder: "Name", autofocus: true, class: "user-input" %>
+  </div>
+
+  <div class="input-sec">
+    <%= f.text_field :photo, placeholder: "Photo", value: 'https://media.istockphoto.com/photos/mature-mixed-race-business-man-picture-id1059661424', class: "user-input" %>
+  </div>
+
+  <div class="input-sec">
+    <%= f.text_area :bio, placeholder: "Bio...", class: "user-input text-height" %>
+  </div>
+
+  <div class="input-sec">
+    <%= f.email_field :email, placeholder: "Email", autocomplete: "email", class: "user-input" %>
+  </div>
+
+  <div class="input-sec">
+    <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password", class: "user-input" %>
+    <% if @minimum_password_length %>
+      <em class = "password">(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+  </div>
+
+  <div class="input-sec">
+    <%= f.password_field :password_confirmation, placeholder: "Password confirmation", autocomplete: "new-password", class: "user-input" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "btn" %>
+  </div>
+<% end %>
+
+<div class="form-post links-cont">
+  <%= render "devise/shared/links" %>
+</div>

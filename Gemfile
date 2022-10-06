@@ -32,6 +32,9 @@ gem 'jbuilder'
 # Use the devise gem as the session and account manager for the application
 gem 'devise'
 
+# Authorization library for Ruby and Ruby on Rails which restricts what resources a given user is allowed to access.
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

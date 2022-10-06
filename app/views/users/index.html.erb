@@ -1,15 +1,15 @@
-<% if user_signed_in?%>
-<h1 class="main-title">Welcome <%= current_user.name %>!</h1>
-<ul>
-  <% @users.each do |user| %>
-    <%= link_to user_path(user.id), class: "user-link" do %>
-      <li class="user-cont">
-        <%= render user %> <%# "render "users/user", user: user" is a longer way %>
-      </li>
+<% if user_signed_in? %>
+  <h1 class="main-title">Welcome <%= current_user.name %>!</h1>
+  <ul>
+    <% @users.each do |user| %>
+      <%= link_to user_path(user.id), class: "user-link" do %>
+        <li class="user-cont">
+          <%= render user %> <%# "render "users/user", user: user" is a longer way %>
+        </li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
 <% else %>
-<h1 class="main-title">Welcome to our Blog!</h1>
-<h1 class="main-title">Please suscribe or sign in</h1>
+  <h1 class="main-title">Welcome to our Blog!</h1>
+  <h1 class="main-title">Please suscribe or sign in</h1>
 <% end %>

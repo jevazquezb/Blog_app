@@ -26,6 +26,15 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    authorize! :destroy, @post # User's authorization to destroy
+    @user = User.find(params[:user_id])
+    flash[:notice] = 'Post was deleted'
+    redirect_to user_posts_path(@user.id)
+  end
+
   # 1.- Retrieves the form data for a post from the params hash
   def posts_params
     params.require(:post).permit(:title, :text)

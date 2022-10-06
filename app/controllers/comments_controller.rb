@@ -11,6 +11,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    authorize! :destroy, @comment # User's authorization to destroy
+    flash[:notice] = 'Comment was deleted'
+    redirect_to request.referrer
+  end
+
   # 1.- Retrieves the form data for a comment from the params hash
   def comments_params
     params.require(:comment).permit(:text)

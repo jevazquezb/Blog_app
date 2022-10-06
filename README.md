@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app: add devise
+# Blog app: Add Authorization rules
 
-> In this part of the project, we added the devise gem to our app and use it for the registration and login of users.
+> In this part of the project, we added the authorization rules to our app using CanCanCan.
 
 ## Built With
 

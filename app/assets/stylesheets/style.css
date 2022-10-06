@@ -147,3 +147,10 @@ body {
   margin: auto;
   margin-top: 5px;
 }
+
+/* delete buttons */
+.btn-cont {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}

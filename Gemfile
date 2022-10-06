@@ -65,7 +65,7 @@ group :development, :test do
 
   # Preview email in the default browser instead of sending it
   gem 'letter_opener'
-  
+
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end

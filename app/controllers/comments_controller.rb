@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  
   def create
     @comment = Comment.new(comments_params) # 2.- Create a new comment object based on the form data
     @comment.author = current_user

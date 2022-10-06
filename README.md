@@ -2,9 +2,7 @@
 
 # Blog app: Add Authorization rules
 
-> In this part of the project, we added the authorization
-> rules to our app using CanCanCan
-> .
+> In this part of the project, we added the authorization rules to our app using CanCanCan.
 
 ## Built With
 

@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
-  has_many :comments, foreign_key: 'author_id'
-  has_many :posts, foreign_key: 'author_id'
-  has_many :likes, foreign_key: 'author_id'
+  has_many :comments, foreign_key: 'author_id', dependent: :destroy
+  has_many :posts, foreign_key: 'author_id', dependent: :destroy
+  has_many :likes, foreign_key: 'author_id', dependent: :destroy
   validates :name, presence: true, length: { minimum: 2, too_short: '%<count>s characters is the minimum allowed' }
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 

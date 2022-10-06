@@ -6,5 +6,7 @@
 </p>
 <div>
   <%= button_to "Like", user_post_likes_path(@user, post), method: :post, class: "btn" %>
-  <%= button_to "Delete", user_post_path(@user, post), method: :delete, class: "btn" %>  
+  <% if can? :destroy, post %>
+    <%= button_to "Delete", user_post_path(@user, post), method: :delete, class: "btn" %>
+  <% end %>  
 </div>

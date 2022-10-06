@@ -5,7 +5,9 @@
   <% @post.comments.includes(:author).each do |comment| %>
     <li>
       <%= comment.author.name %>: <%= comment.text %>
-      <%= button_to "Delete", user_post_comment_path(@user, @post, comment), method: :delete, class: "btn" %>
+      <% if can? :destroy, comment %>
+        <%= button_to "Delete", user_post_comment_path(@user, @post, comment), method: :delete, class: "btn" %>
+      <% end %>
     </li> <%# "render "comments/comment", comment: comment" is a longer way %>
   <% end %>
 </ul>

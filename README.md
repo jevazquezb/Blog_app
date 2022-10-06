@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app: integration specs for views and fix n+1 problems
+# Blog app: add devise
 
-> In this part of the project, we created integration tests for all of the views used in our project and solved the N+1 query problem.
+> In this part of the project, we added the devise gem to our app and use it for the registration and login of users.
 
 ## Built With
 

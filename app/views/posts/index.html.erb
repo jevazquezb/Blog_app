@@ -11,7 +11,10 @@
 
         <ul class="<%= 'border post-pad' if post.comments.length != 0 %>">
           <% post.recent_comments.each do |comment| %>
-            <li><%= comment.author.name %>: <%= comment.text %></li> <%# "render "comments/comment", comment: comment" is a longer way %>
+            <li>
+              <%= comment.author.name %>: <%= comment.text %>
+              <%= button_to "Delete", user_post_comment_path(@user, post, comment), method: :delete, class: "btn" %>
+            </li> <%# "render "comments/comment", comment: comment" is a longer way %>
           <% end %>
         </ul>
       </li>

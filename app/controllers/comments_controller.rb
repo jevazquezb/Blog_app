@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  # load_and_authorize_resource
+  
   def create
     @comment = Comment.new(comments_params) # 2.- Create a new comment object based on the form data
     @comment.author = current_user
@@ -16,6 +18,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
+    authorize! :destroy, @comment # User's authorization to destroy
     flash[:notice] = 'Comment was deleted'
     redirect_to request.referrer
   end

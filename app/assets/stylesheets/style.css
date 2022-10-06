@@ -142,3 +142,8 @@ body {
 .flex-right {
   align-items: flex-end;
 }
+
+.center-box {
+  margin: auto;
+  margin-top: 5px;
+}

@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog app: Add Authorization rules
+# Blog app: Add API endpoint
 
-> In this part of the project, we added the authorization rules to our app using CanCanCan.
+> In this part of the project, we added the API ENDPOINT to our app using Jwt.
 
 ## Built With
 

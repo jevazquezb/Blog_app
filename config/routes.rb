@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #   end
   # end
 
-  resources :posts, only: [:new, :create]
+  # resources :posts, only: [:new, :create]
 
   # API routes
   post 'api/v1/auth/login', to: 'authentication#login'

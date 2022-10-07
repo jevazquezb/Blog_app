@@ -2,7 +2,7 @@
 
 # Blog app: Add API endpoint
 
-> In this part of the project, we added the API ENDPOINT to our app using Jwt.
+> In this part of the project, we added some API endpoints to our app and used JWT as an authentication tool.
 
 ## Built With
 

@@ -2,7 +2,13 @@ class Api::V1::CommentsController < ApplicationController
   def index
     @post = Post.find(params[:post_id])
     @comments = @post.comments
-    render json: @comments
+    if @comments.any?
+      render json: @comments
+    else
+      render json: { errors: 'No comments found' }, status: :not_found
+    end
+  rescue ActiveRecord::RecordNotFound
+    render json: { errors: 'Post doesn\'t exist' }, status: :not_found
   end
 
   def create

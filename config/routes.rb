@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   end
   root "users#index"
 
-  # resources :users, only: [:index, :show] do
-  #   resources :posts, only: [:index, :show, :destroy] do
-  #     resources :comments, only: [:create, :destroy]
-  #     resources :likes, only: [:create]
-  #   end
-  # end
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index, :show, :destroy] do
+      resources :comments, only: [:create, :destroy]
+      resources :likes, only: [:create]
+    end
+  end
 
-  # resources :posts, only: [:new, :create]
+  resources :posts, only: [:new, :create]
 
   # API routes
   post 'api/v1/auth/login', to: 'authentication#login'

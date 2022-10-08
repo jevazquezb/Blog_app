@@ -1,4 +1,9 @@
 class Api::V1::CommentsController < ApplicationController
+  include JsonWebToken
+
+  skip_before_action :verify_authenticity_token, only: [:create]
+  before_action :authenticate_request
+  
   def index
     @post = Post.find(params[:post_id])
     @comments = @post.comments

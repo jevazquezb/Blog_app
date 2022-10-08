@@ -2,7 +2,7 @@ class Api::V1::PostsController < ApplicationController
   include JsonWebToken
 
   before_action :authenticate_request
-  
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts

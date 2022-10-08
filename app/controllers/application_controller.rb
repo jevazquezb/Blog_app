@@ -1,4 +1,5 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
   before_action :update_allowed_parameters, if: :devise_controller?
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -15,10 +16,6 @@ class ApplicationController < ActionController::API
       u.permit(:name, :photo, :bio, :email, :password, :current_password)
     end
   end
-
-  include JsonWebToken
-
-  before_action :authenticate_request
 
   private
 

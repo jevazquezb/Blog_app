@@ -35,6 +35,9 @@ gem 'devise'
 # Authorization library for Ruby and Ruby on Rails which restricts what resources a given user is allowed to access.
 gem 'cancancan'
 
+# Use jwt to add secure token-based authentication to Ruby projects
+gem 'jwt'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

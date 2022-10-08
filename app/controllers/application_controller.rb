@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
   before_action :update_allowed_parameters, if: :devise_controller?
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -16,5 +15,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) do |u|
       u.permit(:name, :photo, :bio, :email, :password, :current_password)
     end
+  end
+
+  private
+
+  def authenticate_request
+    header = request.headers['Authorization']
+    header = header.split.last if header
+    decoded = jwt_decode(header)
+    @current_user = User.find(decoded[:user_id])
   end
 end

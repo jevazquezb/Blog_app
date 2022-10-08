@@ -82,4 +82,8 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Convert to an API app
+  # By default, config.debug_exception_response_format is set to :api, when config.api_only is set to true.
+  config.debug_exception_response_format = :api
 end
